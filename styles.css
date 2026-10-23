@@ -1,0 +1,5 @@
+/* The script replaces visible leaf text with the user's custom values. */
+[data-testid="SideNav_AccountSwitcher_Button"] [data-unknow-x-label="0"],
+[data-testid="SideNav_AccountSwitcher_Button"] [data-unknow-x-label="1"] {
+  white-space: nowrap;
+}
