@@ -24,7 +24,7 @@ Chrome/Edge Manifest V3 extension for X. It keeps the lower-left avatar and acco
 4. 点击“加载已解压的扩展程序”。
 5. 选择解压后的 `unknow-X` 文件夹。
 6. 打开扩展的“详细信息”，进入“扩展程序选项”。
-7. 填写自定义昵称和自定义 ID，点击“保存设置”。
+7. 填写自定义昵称和自定义 ID，点击“保存设置”。设置页右上角的语言按钮可以在中文和 English 之间切换整页界面。
 
 第一次安装后，需要重新打开或刷新当前 X 标签页，让浏览器注入扩展脚本。之后 X 内部页面更新不需要手动刷新。
 
@@ -78,7 +78,7 @@ Chrome/Edge Manifest V3 extension for X. It keeps the lower-left avatar and acco
 4. Click **Load unpacked**.
 5. Select the extracted `unknow-X` folder.
 6. Open the extension's **Details** page and choose **Extension options**.
-7. Enter a custom nickname and ID, then click **保存设置 / Save settings**.
+7. Enter a custom nickname and ID, then click **保存设置 / Save settings**. Use the language button in the upper-right corner to switch the whole settings page between Chinese and English.
 
 After the first installation, reopen or refresh the current X tab once so the browser can inject the content script. X's internal navigation does not require manual refresh afterwards.
 
