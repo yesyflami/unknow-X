@@ -22,7 +22,7 @@
 
 ## 安装
 
-1. 点击上方“下载插件”并解压 `unknow-X.zip`。
+1. 点击上方的<a href="https://github.com/yesyflami/unknow-X/releases/download/v1.2.1/unknow-X.zip">下载插件</a>并解压 `unknow-X.zip`。
 2. 打开 Chrome 的 `chrome://extensions`，或 Edge 的 `edge://extensions`。
 3. 打开右上角的“开发者模式”。
 4. 点击“加载已解压的扩展程序”。
