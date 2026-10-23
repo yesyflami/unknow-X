@@ -4,7 +4,7 @@
 
 **English | <a href="README.md">简体中文</a>**
 
-<a href="https://github.com/yesyflami/unknow-X/releases/download/v1.2.1/unknow-X.zip">⬇️ Download the extension</a>
+<a href="https://github.com/yesyflami/unknow-X/releases/download/v1.3.1/unknow-X.zip">⬇️ Download the extension</a>
 
 </div>
 
@@ -23,7 +23,7 @@ A Chrome and Edge extension for X (formerly Twitter). It keeps the lower-left av
 
 ## Installation
 
-1. Click <a href="https://github.com/yesyflami/unknow-X/releases/download/v1.2.1/unknow-X.zip">Download the extension</a> above and unzip `unknow-X.zip`.
+1. Click <a href="https://github.com/yesyflami/unknow-X/releases/download/v1.3.1/unknow-X.zip">Download the extension</a> above and unzip `unknow-X.zip`.
 2. Open `chrome://extensions` in Chrome or `edge://extensions` in Edge.
 3. Enable **Developer mode**.
 4. Click **Load unpacked**.
