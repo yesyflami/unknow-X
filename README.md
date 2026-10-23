@@ -1,123 +1,62 @@
-# unknow-X
-
-Chrome/Edge Manifest V3 extension for X. It keeps the lower-left avatar and account-switching button usable while replacing the visible account name and handle with custom text.
-
 <div align="center">
 
-<a href="https://github.com/yesyflami/unknow-X/releases/download/v1.2.0/unknow-X.zip">⬇️ 下载插件 / Download</a>
-&nbsp;&nbsp;·&nbsp;&nbsp;
-<a href="#中文说明">🇨🇳 中文</a>
-&nbsp;&nbsp;·&nbsp;&nbsp;
-<a href="#english">🇬🇧 English</a>
+# unknow-X
+
+**<a href="README.en.md">English</a> | 简体中文**
+
+<a href="https://github.com/yesyflami/unknow-X/releases/download/v1.2.1/unknow-X.zip">⬇️ 下载插件</a>
 
 </div>
 
-> GitHub README 不允许运行 JavaScript，因此语言切换使用页面内的可点击导航。点击“中文”或“English”即可跳到对应说明。
+一个适用于 Chrome 和 Edge 的 X（原 Twitter）浏览器扩展。它保留左下角头像和账号切换功能，只替换显示出来的昵称和 @ID。
 
-## 中文说明
+## 功能
 
-### 功能
-
-`unknow-X` 只处理 X 左下角账号切换区域的可见文字：
-
-- 头像和账号切换按钮保留；
+- 头像和账号切换按钮保持可用；
 - 真实昵称和真实 @ID 不显示；
 - 可以分别设置自定义昵称和自定义 ID；
 - 任意一项留空，就隐藏对应文字；
-- 支持 `x.com` 和旧域名 `twitter.com`；
-- 通过 MutationObserver 监听 X 的单页应用更新，页面内部跳转、切换账号或重新渲染时无需手动刷新；
-- 设置保存到浏览器的 `chrome.storage.sync` 中。
+- 支持 `x.com` 和 `twitter.com`；
+- 页面内部跳转、切换账号或重新渲染时持续生效，无需反复刷新；
+- 设置保存在浏览器的 `chrome.storage.sync` 中。
 
-### 安装
+## 安装
 
-1. 下载并解压 `unknow-X.zip`。
+1. 点击上方“下载插件”并解压 `unknow-X.zip`。
 2. 打开 Chrome 的 `chrome://extensions`，或 Edge 的 `edge://extensions`。
 3. 打开右上角的“开发者模式”。
 4. 点击“加载已解压的扩展程序”。
 5. 选择解压后的 `unknow-X` 文件夹。
 6. 打开扩展的“详细信息”，进入“扩展程序选项”。
-7. 填写自定义昵称和自定义 ID，点击“保存设置”。设置页右上角的语言按钮可以在中文和 English 之间切换整页界面。
+7. 填写自定义昵称和自定义 ID，点击“保存设置”。
 
 第一次安装后，需要重新打开或刷新当前 X 标签页，让浏览器注入扩展脚本。之后 X 内部页面更新不需要手动刷新。
 
-### 设置示例
+## 设置示例
 
 - 自定义昵称：`工作账号`
 - 自定义 ID：`@company`
 
-左下角会显示这两个自定义值，而不会显示真实账号信息。将其中一个输入框留空，可以单独隐藏昵称或 ID。
+左下角会显示这两个自定义值，而不会显示真实账号信息。将其中一个输入框留空，可以单独隐藏昵称或 ID。设置页右上角的按钮可以在中文和 English 之间切换界面。
 
-### 更新
+## 更新
 
 1. 下载新版本并解压到新的文件夹。
 2. 打开扩展管理页面。
 3. 找到 `unknow-X`，点击“重新加载”。
 4. 如有必要，在 X 标签页执行一次刷新。
 
-### 卸载
+## 卸载
 
 在 `chrome://extensions` 或 `edge://extensions` 中找到 `unknow-X`，点击“移除”。卸载后，X 页面会恢复显示原来的账号文字。
 
-### 隐私说明
+## 隐私说明
 
 扩展只在 `x.com` 和 `twitter.com` 页面运行。自定义昵称和 ID 仅保存在浏览器扩展存储中，不会发送到第三方服务器。隐藏界面文字不等于退出登录；打开账号菜单、个人资料或发帖时，X 仍可能显示真实账号信息。
 
-### 故障排查
+## 故障排查
 
 - 左下角仍显示真实文字：确认扩展已启用，并在扩展管理页点击“重新加载”，然后刷新 X 标签页。
 - 设置没有变化：回到扩展选项页点击“保存设置”，再检查 X 是否位于 `x.com` 或 `twitter.com`。
 - 账号切换不可用：不要禁用或删除左下角按钮；本扩展只替换文字，不会拦截点击事件。
 
-## English
-
-### Features
-
-`unknow-X` changes only the visible text in X's lower-left account switcher:
-
-- The avatar and account-switching button remain usable.
-- The real display name and @handle are replaced with custom values.
-- The nickname and ID can be configured independently.
-- Leave either field empty to hide that line.
-- Supports both `x.com` and `twitter.com`.
-- A MutationObserver keeps the replacement active across X's single-page navigation, account switching, and DOM rerenders.
-- Settings are stored in `chrome.storage.sync`.
-
-### Installation
-
-1. Download and unzip `unknow-X.zip`.
-2. Open `chrome://extensions` in Chrome or `edge://extensions` in Edge.
-3. Enable **Developer mode**.
-4. Click **Load unpacked**.
-5. Select the extracted `unknow-X` folder.
-6. Open the extension's **Details** page and choose **Extension options**.
-7. Enter a custom nickname and ID, then click **保存设置 / Save settings**. Use the language button in the upper-right corner to switch the whole settings page between Chinese and English.
-
-After the first installation, reopen or refresh the current X tab once so the browser can inject the content script. X's internal navigation does not require manual refresh afterwards.
-
-### Example
-
-- Custom nickname: `Work account`
-- Custom ID: `@company`
-
-The switcher shows these custom values instead of the real account labels. Leave either input empty to hide only that line.
-
-### Updating
-
-1. Download and unzip the new version into a new folder.
-2. Open the browser's extensions page.
-3. Find `unknow-X` and click **Reload**.
-4. Refresh the X tab once if needed.
-
-### Uninstalling
-
-Remove `unknow-X` from `chrome://extensions` or `edge://extensions`. X will then show its original account labels again.
-
-### Privacy
-
-The extension runs only on `x.com` and `twitter.com`. Custom labels stay in the browser extension storage and are not sent to a third-party server. Hiding the labels does not log you out; X may still reveal the real account in the account menu, profile pages, or posts.
-
-### Troubleshooting
-
-- Real labels are still visible: make sure the extension is enabled, click **Reload** in the extensions page, and refresh X once.
-- Settings do not change: save them again in the extension options and confirm that the page is on `x.com` or `twitter.com`.
-- Account switching is unavailable: do not disable or remove the lower-left button. This extension replaces text only and does not intercept clicks.
