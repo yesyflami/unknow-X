@@ -2,6 +2,18 @@
 
 Chrome/Edge Manifest V3 extension for X. It keeps the lower-left avatar and account-switching button usable while replacing the visible account name and handle with custom text.
 
+<div align="center">
+
+<a href="https://github.com/yesyflami/unknow-X/releases/download/v1.2.0/unknow-X.zip">⬇️ 下载插件 / Download</a>
+&nbsp;&nbsp;·&nbsp;&nbsp;
+<a href="#中文说明">🇨🇳 中文</a>
+&nbsp;&nbsp;·&nbsp;&nbsp;
+<a href="#english">🇬🇧 English</a>
+
+</div>
+
+> GitHub README 不允许运行 JavaScript，因此语言切换使用页面内的可点击导航。点击“中文”或“English”即可跳到对应说明。
+
 ## 中文说明
 
 ### 功能
