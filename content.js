@@ -13,7 +13,13 @@
   }
 
   function apply(button) {
-    const leaves = leafTextElements(button);
+    const allLeaves = leafTextElements(button);
+    // Prefer fresh X nodes after a rerender, while retaining marked nodes when
+    // X has kept the same subtree in place.
+    const leaves = [
+      ...allLeaves.filter((el) => !el.hasAttribute(MARK)),
+      ...allLeaves.filter((el) => el.hasAttribute(MARK))
+    ];
     if (!leaves.length) return;
     const values = [settings.name, settings.id];
     leaves.slice(0, 2).forEach((el, i) => {
