@@ -32,11 +32,26 @@
     }
     if (avatar) {
       button.querySelectorAll('img').forEach((img) => {
+        if (!img.hasAttribute('data-unknow-x-original-src')) {
+          img.setAttribute('data-unknow-x-original-src', img.getAttribute('src') || '');
+          img.setAttribute('data-unknow-x-original-srcset', img.getAttribute('srcset') || '');
+        }
         img.src = avatar;
         img.srcset = '';
       });
       button.querySelectorAll('[style*="background-image"]').forEach((el) => {
+        if (!el.hasAttribute('data-unknow-x-original-bg')) {
+          el.setAttribute('data-unknow-x-original-bg', el.style.backgroundImage || '');
+        }
         el.style.setProperty('background-image', `url("${avatar}")`, 'important');
+      });
+    } else {
+      button.querySelectorAll('img[data-unknow-x-original-src]').forEach((img) => {
+        img.src = img.getAttribute('data-unknow-x-original-src') || '';
+        img.srcset = img.getAttribute('data-unknow-x-original-srcset') || '';
+      });
+      button.querySelectorAll('[data-unknow-x-original-bg]').forEach((el) => {
+        el.style.setProperty('background-image', el.getAttribute('data-unknow-x-original-bg') || '');
       });
     }
   }
