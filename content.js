@@ -2,6 +2,7 @@
   const BUTTON = '[data-testid="SideNav_AccountSwitcher_Button"]';
   const MARK = 'data-unknow-x-label';
   let settings = { name: '', id: '' };
+  let avatar = '';
 
   function leafTextElements(button) {
     return [...button.querySelectorAll('span, div')].filter((el) => {
@@ -20,14 +21,24 @@
       ...allLeaves.filter((el) => !el.hasAttribute(MARK)),
       ...allLeaves.filter((el) => el.hasAttribute(MARK))
     ];
-    if (!leaves.length) return;
-    const values = [settings.name, settings.id];
-    leaves.slice(0, 2).forEach((el, i) => {
-      el.setAttribute(MARK, String(i));
-      el.textContent = values[i] || '';
-      el.style.setProperty('color', values[i] ? '' : 'transparent', 'important');
-      el.style.setProperty('-webkit-text-fill-color', values[i] ? '' : 'transparent', 'important');
-    });
+    if (leaves.length) {
+      const values = [settings.name, settings.id];
+      leaves.slice(0, 2).forEach((el, i) => {
+        el.setAttribute(MARK, String(i));
+        el.textContent = values[i] || '';
+        el.style.setProperty('color', values[i] ? '' : 'transparent', 'important');
+        el.style.setProperty('-webkit-text-fill-color', values[i] ? '' : 'transparent', 'important');
+      });
+    }
+    if (avatar) {
+      button.querySelectorAll('img').forEach((img) => {
+        img.src = avatar;
+        img.srcset = '';
+      });
+      button.querySelectorAll('[style*="background-image"]').forEach((el) => {
+        el.style.setProperty('background-image', `url("${avatar}")`, 'important');
+      });
+    }
   }
 
   function scan(root = document) {
@@ -39,12 +50,22 @@
     settings = saved;
     scan();
   });
+  chrome.storage.local.get({ avatar: '' }, (saved) => {
+    avatar = saved.avatar || '';
+    scan();
+  });
 
   chrome.storage.onChanged.addListener((changes, area) => {
     if (area !== 'sync') return;
     if (changes.name) settings.name = changes.name.newValue || '';
     if (changes.id) settings.id = changes.id.newValue || '';
     scan();
+  });
+  chrome.storage.onChanged.addListener((changes, area) => {
+    if (area === 'local' && changes.avatar) {
+      avatar = changes.avatar.newValue || '';
+      scan();
+    }
   });
 
   new MutationObserver((records) => {

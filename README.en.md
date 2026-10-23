@@ -14,6 +14,7 @@ A Chrome and Edge extension for X (formerly Twitter). It keeps the lower-left av
 
 - The avatar and account-switching button remain usable.
 - The real display name and @handle are not shown.
+- Upload and remove a custom avatar at any time.
 - Configure the nickname and ID independently.
 - Leave either field empty to hide that line.
 - Supports both `x.com` and `twitter.com`.
@@ -29,6 +30,7 @@ A Chrome and Edge extension for X (formerly Twitter). It keeps the lower-left av
 5. Select the extracted `unknow-X` folder.
 6. Open the extension's **Details** page and choose **Extension options**.
 7. Enter a custom nickname and ID, then click **Save settings**.
+8. Under **Custom avatar**, upload a PNG, JPEG, WebP, or GIF image (under 2 MB recommended).
 
 After the first installation, reopen or refresh the current X tab once so the browser can inject the content script. X's internal navigation does not require manual refresh afterwards.
 
@@ -52,7 +54,7 @@ Remove `unknow-X` from `chrome://extensions` or `edge://extensions`. X will then
 
 ## Privacy
 
-The extension runs only on `x.com` and `twitter.com`. Custom labels stay in browser extension storage and are not sent to a third-party server. Hiding the labels does not log you out; X may still reveal the real account in the account menu, profile pages, or posts.
+The extension runs only on `x.com` and `twitter.com`. The custom avatar and labels stay in browser extension storage and are not sent to a third-party server. Hiding the labels does not log you out; X may still reveal the real account in the account menu, profile pages, or posts.
 
 ## Troubleshooting
 
