@@ -8,9 +8,9 @@
 
 <a href="https://github.com/yesyflami/unknow-X/releases/download/v1.3.1/unknow-X.zip">⬇️ 下载插件</a>
 
-</div>
-
 <p><strong>一个用于 X（原 Twitter）网页端更改本地显示的账号名与头像的浏览器扩展应用<br>适用于 Chrome 和 Edge</strong></p>
+
+</div>
 
 ## 免责声明
 
