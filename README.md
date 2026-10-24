@@ -24,7 +24,17 @@
 ## 安装
 
 1. 点击上方的<a href="https://github.com/yesyflami/unknow-X/releases/download/v1.3.1/unknow-X.zip">下载插件</a>并解压 `unknow-X.zip`。
-2. 打开 [chrome://extensions](chrome://extensions)，或 [edge://extensions](edge://extensions)。
+2. 打开浏览器地址栏，粘贴下面对应的地址：
+
+   **Chrome**
+   ```
+   chrome://extensions
+   ```
+
+   **Edge**
+   ```
+   edge://extensions
+   ```
 3. 打开右上角的“开发者模式”。
 4. 点击“加载已解压的扩展程序”。
 5. 选择解压后的 `unknow-X` 文件夹。
