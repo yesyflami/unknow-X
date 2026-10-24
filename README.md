@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="icon.png" alt="unknow-X" width="128">
+<img src="readme-banner-black.png" alt="unknow-X" width="128">
 
 # unknow-X
 
